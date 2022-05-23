@@ -15,3 +15,7 @@ Install required packages using the `environment.yml` file.
 Here we provide annotations and pretrained features in BaiduNetdisk.
 
 ## Training & Inference
+
+
+## Acknownledgements
+Our code is based on the implementations of [HGR(CVPR2020)](https://github.com/cshizhe/hgr_v2t) and [COOT(NeurIPS2021)](https://github.com/gingsi/coot-videotext).

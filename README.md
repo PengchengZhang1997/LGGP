@@ -5,6 +5,10 @@ This code contains PyTorch implementation of the paper "Local-Global Graph Pooli
 ## Requirements
 Python 3.6 and PyTorch 1.6.
 
+Install required packages using the `environment.yml` file.
+
+`conda env create -f environment.yml`
+
 ## Datasets
 [ActivityNet Captions](https://academictorrents.com/details/0c824440c94cc18ace1cb2c77423919b728d703e), [Youcook2 with ImageNet/Kinetics Features](https://academictorrents.com/details/3ae97c261ed32d3bd5326d3bf6991c9e2ea3dc17), and [Youcook2 with Howto100m features](https://academictorrents.com/details/70417e3793dbbb03ca68981307860254766d5a1d) are used in our experiments.
 

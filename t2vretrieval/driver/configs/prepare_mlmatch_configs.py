@@ -20,7 +20,7 @@ def prepare_match_model(root_dir):
 
   model_cfg = t2vretrieval.models.mlmatch.RoleGraphMatchModelConfig()
   model_cfg.logdir = os.path.join(res_dir, 'mlmatch', 'run')
-  model_cfg.gpu_id = 1
+  model_cfg.gpu_id = 3
   
   model_cfg.max_frames_in_video = 20 
   model_cfg.max_words_in_sent = 30
@@ -33,16 +33,16 @@ def prepare_match_model(root_dir):
   model_cfg.margin = 0.2
   model_cfg.loss_direction = 'bi'
 
-  model_cfg.num_epoch = 9999
+  model_cfg.num_epoch = 90
   model_cfg.max_violation = False
   model_cfg.hard_topk = 1 #3
   model_cfg.loss_weights = None #[1, 0.2, 0.2, 0.2]
 
-  model_cfg.trn_batch_size = 80
-  model_cfg.tst_batch_size = 80
+  model_cfg.trn_batch_size = 64
+  model_cfg.tst_batch_size = 64
   model_cfg.base_lr = 0.0001
   model_cfg.decay_schema = 'MultiStepLR'
-  model_cfg.decay_boundarys = [9, 12, 20, 30, 50, 70]
+  model_cfg.decay_boundarys = [5, 10, 15, 30, 50, 70]
   model_cfg.decay_rate = 0.1
   model_cfg.monitor_iter = 100
   model_cfg.summary_iter = 100
@@ -111,7 +111,7 @@ def prepare_match_model(root_dir):
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
-  parser.add_argument('root_dir')
+  parser.add_argument('root_dir') #/home1/zhangpengcheng/data/MM21/data/activitynet
   opts = parser.parse_args()
 
   prepare_match_model(opts.root_dir)
